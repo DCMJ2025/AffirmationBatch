@@ -1,0 +1,9 @@
+2025-08-05 16:21:19,618 - __main__ - INFO - Reading folder path from .env: C:\XMLs
+2025-08-05 16:21:19,619 - folderManager - INFO - Created folder: processed_xmls at C:\Users\SharvariDeshmukh\OneDrive - Delta Capita Group\Affirmations\AffirmationBatch-SharvariFork\AffirmationBatch\processed_xmls
+2025-08-05 16:21:19,620 - folderManager - INFO - Created folder: broken_xmls at C:\Users\SharvariDeshmukh\OneDrive - Delta Capita Group\Affirmations\AffirmationBatch-SharvariFork\AffirmationBatch\broken_xmls
+2025-08-05 16:21:19,621 - __main__ - INFO - Scanning directory: C:\XMLs for XML files.
+2025-08-05 16:21:19,622 - xmlValidator - INFO - XML file TREF0001_v2.xml is well-formed.
+2025-08-05 16:21:19,623 - xmlParser - INFO - Parsed XML file TREF0001_v2.xml successfully.
+2025-08-05 16:21:23,276 - SendEmail - INFO - Email sent successfully to sharvari.deshmukh@deltacapita.com
+2025-08-05 16:21:23,278 - fileMover - INFO - Successfully moved file: TREF0001_v2.xml to C:\Users\SharvariDeshmukh\OneDrive - Delta Capita Group\Affirmations\AffirmationBatch-SharvariFork\AffirmationBatch\processed_xmls
+2025-08-05 16:21:23,278 - __main__ - INFO - Successfully moved 1 XML files to "C:\Users\SharvariDeshmukh\OneDrive - Delta Capita Group\Affirmations\AffirmationBatch-SharvariFork\AffirmationBatch\processed_xmls"

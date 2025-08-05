@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+	<Upstream>
+		<System>AIX</System>
+		<SystemID>328408</SystemID>
+	</Upstream>
+	<Tradedetails>
+		<tradeid>TREF0001</tradeid>
+		<version>2</version>
+		<Confirmation>Paper</Confirmation>
+		<Nominal>1000000</Nominal>
+		<Ccy>CAD</Ccy>
+		<Sccy>USD</Sccy>
+		<Security>SEC34658966</Security>
+		<Event>New</Event>
+		<Eventtype>Amend</Eventtype>
+		<Productcategory>Option</Productcategory>
+		<Product>Exotic</Product>
+		<Asset>Equity</Asset>
+		<Rate>1.48</Rate>
+		<TD>2025-07-28T00:00:00Z</TD>
+		<OED>2052-07-29T00:00:00Z</OED>
+		<Cptycode>KJD36</Cptycode>
+	</Tradedetails>
+	<Party>
+		<Party1>House</Party1>
+		<Party2>Externalparty</Party2>
+		<Party2email>vlfsv@finance.org</Party2email>
+		<Region>India</Region>
+	</Party>
+</root>
