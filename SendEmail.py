@@ -48,11 +48,13 @@ def extract_data(xml_path: str):
             table_data.append((key, value))
             
                      
-        subject=f"Trade Affirmation: {trade_data.trade_details.tradeid}"                    
+        subject=f"Affirmation Request || Trade ID: {trade_data.trade_details.tradeid}"   
+        message=f"""Hi Team,<br><br>This email request is for the purpose of affirming the trade economics to ensure both the parties are aware of the trade and main economic attributes.<br><br>Please review the detailed economics by clicking on below link."""                 
+        
         send_email(
             subject=subject,
             to_email="sharvari.deshmukh@deltacapita.com", 
-            html_content_body= create_html_email(subject, "Please find Trade Economics below:", table_data, "http://google.com" , "View in system")
+            html_content_body= create_html_email(subject, message, table_data, "http://google.com" , "View in system")
         )
 
     else:
