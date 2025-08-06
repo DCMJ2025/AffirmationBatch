@@ -1,6 +1,6 @@
-def create_html_email(subject, message, table_data, link_url, link_text):
+def create_html_email(message, table_data, link_url, link_text):
     table_rows = "".join(
-        f"<tr><td>{key}</td><td>{value}"
+        f"<tr><td>{key.replace('_', ' ')}</td><td>{value}"
         for key, value in table_data
     )
 

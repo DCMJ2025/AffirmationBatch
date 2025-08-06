@@ -1,6 +1,6 @@
 import os
 import logging
-from Trades import TradeDetails, Party, Trade 
+from Trades import TradeDetails, Trade 
 from typing import Optional, Any
 import xml.etree.ElementTree as ET 
 
@@ -25,7 +25,7 @@ class XmlParser:
             
             trade_details_elem = root.find('Tradedetails')
             trade_details_data = TradeDetails(
-                tradeid=findtext(trade_details_elem, 'tradeid'),
+                Trade_Ref=findtext(trade_details_elem, 'tradeid'),
                 # version=findtext(trade_details_elem, 'version'),
                 # Confirmation=findtext(trade_details_elem, 'Confirmation'),
                 # Nominal=findtext(trade_details_elem, 'Nominal'),
@@ -34,26 +34,26 @@ class XmlParser:
                 # Security=findtext(trade_details_elem, 'Security'),
                 # Event=findtext(trade_details_elem, 'Event'),
                 # Eventtype=findtext(trade_details_elem, 'Eventtype'),
-                # Productcategory=findtext(trade_details_elem, 'Productcategory'),
-                # Product=findtext(trade_details_elem, 'Product'),
-                Asset=findtext(trade_details_elem, 'Asset'),
-                Rate=findtext(trade_details_elem, 'Rate'),
-                TD=findtext(trade_details_elem, 'TD'),
+                Asset_Class=findtext(trade_details_elem, 'Asset'),
+                Product=findtext(trade_details_elem, 'Product'),
+                Product_Category=findtext(trade_details_elem, 'Productcategory'),
+                # Rate=findtext(trade_details_elem, 'Rate'),
+                # TD=findtext(trade_details_elem, 'TD'),
                 # OED=findtext(trade_details_elem, 'OED'),
                 # MD=findtext(trade_details_elem, 'MD'),
                 # Cptycode=findtext(trade_details_elem, 'Cptycode')
             )
 
-            party_elem = root.find('Party')
-            party_data = Party(
+            # party_elem = root.find('Party')
+            # party_data = Party(
                 # Party1=findtext(party_elem, 'Party1'),
                 # Party2=findtext(party_elem, 'Party2'),
-                Party2email=findtext(party_elem, 'Party2email'),
+                # Party2email=findtext(party_elem, 'Party2email'),
                 # Region=findtext(party_elem, 'Region')
-            )
+            # )
             
             app_logger.info(f"Parsed XML file {os.path.basename(file_path)} successfully.")
-            return Trade(trade_details=trade_details_data, party=party_data)
+            return Trade(trade_details=trade_details_data)
             
         except ET.ParseError as e:
             self.app_logger.error(f"Error parsing XML file {file_path}: {e}")
